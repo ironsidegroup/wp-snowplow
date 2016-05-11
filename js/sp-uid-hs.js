@@ -1,1 +1,0 @@
-window.snowplow('setUserIdFromCookie', 'hubspotutk');

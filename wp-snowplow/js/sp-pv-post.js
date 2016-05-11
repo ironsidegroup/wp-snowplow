@@ -14,6 +14,9 @@ window.snowplow('trackPageView', null, [{
 		post_permalink: sp_post_meta.data.post_permalink,
 		post_type: sp_post_meta.data.post_type,
 		comment_status: sp_post_meta.data.comment_status,
-		comment_count: sp_post_meta.data.comment_count
+		comment_count: sp_post_meta.data.comment_count,
+		post_tags: sp_post_meta.data.post_tags,
+		post_categories: sp_post_meta.data.post_categories,
+		post_thumbnail: sp_post_meta.data.post_thumbnail
 	}
 }]);

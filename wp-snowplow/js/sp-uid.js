@@ -1,0 +1,1 @@
+window.snowplow('setUserIdFromCookie', sp_parms.userid);
