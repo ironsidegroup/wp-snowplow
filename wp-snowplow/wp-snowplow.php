@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Snowplow Analytics for Wordpress
-Plugin URI: http://ironsidegroup.com
+Plugin URI: https://github.com/ironsidegroup/wp-snowplow
 Description: Adds a Snowplow tracking code with custom Wordpress context to your site.
 Version: 1.0
 Author: Greg Bonnette
