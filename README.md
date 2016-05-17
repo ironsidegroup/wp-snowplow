@@ -1,6 +1,12 @@
-# WordPress Custom Context for Snowplow
+# Snowplow Analytics for Wordpress
 
-## JSON Schema
+## Background
+
+## Installation Instructions
+These instructions assume you already have a Snowplow Analytics collector and pipeline running. If you do not, check out [Snowplow Analytics](http://snowplowanalytics.com) for more information on getting started with the platform.
+
+### Step 1: Configure the Wordpress Schema
+
 Snowplow's template for their JSON Schemas shows the most basic fields that are needed for custom contexts:
 
       {
@@ -42,8 +48,7 @@ Under custom-context/json-schema/schemas/com.yourcompany/WordPress/jsonschema in
 
 Caveat: When saving the JSON to your Iglu repo, make sure there is public read access to the JSON Schema. In S3, you will have to enable website hosting for the bucket and publicize the JSON Schema inside the bucket.
 
-
-## JSONPath and SQL DDL
+### Step 2: Prepare your Data Warehouse
 
 With the JSON Schema finished, you can use that file to create the necessary JSONPath file. This file is used after the Snowplow shredding process and facilitates how the different custom context fields are split up and stored inside the custom context Redshift table. 
 
@@ -67,3 +72,5 @@ to:
 
     COMMENT ON TABLE atomic.com_yourcompany_word_press_1 IS 'iglu:com.yourcompany/WordPress/jsonschema/1-0-0';
 
+### Step 3: Install and Configure the Wordpress Plugin
+Coming Soon!
