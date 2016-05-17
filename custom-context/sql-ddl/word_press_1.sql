@@ -1,6 +1,6 @@
 CREATE SCHEMA IF NOT EXISTS atomic;
 
-CREATE TABLE IF NOT EXISTS atomic.com_ironside_word_press_1 (
+CREATE TABLE IF NOT EXISTS atomic.com_yourcompany_word_press_1 (
     "schema_vendor"     VARCHAR(128)  ENCODE RUNLENGTH NOT NULL,
     "schema_name"       VARCHAR(128)  ENCODE RUNLENGTH NOT NULL,
     "schema_format"     VARCHAR(128)  ENCODE RUNLENGTH NOT NULL,
@@ -33,4 +33,4 @@ DISTSTYLE KEY
 DISTKEY (root_id)
 SORTKEY (root_tstamp);
 
-COMMENT ON TABLE atomic.com_ironside_word_press_1 IS 'iglu:com.ironside/WordPress/jsonschema/1-0-0';
+COMMENT ON TABLE atomic.com_yourcompany_word_press_1 IS 'iglu:com.yourcompany/WordPress/jsonschema/1-0-0';
