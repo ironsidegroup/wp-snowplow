@@ -1,0 +1,30 @@
+{
+    "jsonpaths": [
+        "$.schema.vendor",
+        "$.schema.name",
+        "$.schema.format",
+        "$.schema.version",
+        "$.hierarchy.rootId",
+        "$.hierarchy.rootTstamp",
+        "$.hierarchy.refRoot",
+        "$.hierarchy.refTree",
+        "$.hierarchy.refParent",
+        "$.data.comment_count",
+        "$.data.comment_status",
+        "$.data.guid",
+        "$.data.id",
+        "$.data.post_author",
+        "$.data.post_author_name",
+        "$.data.post_categories",
+        "$.data.post_date",
+        "$.data.post_date_gmt",
+        "$.data.post_modified",
+        "$.data.post_modified_gmt",
+        "$.data.post_name",
+        "$.data.post_permalink",
+        "$.data.post_tags",
+        "$.data.post_thumbnail",
+        "$.data.post_title",
+        "$.data.post_type"
+    ]
+}
