@@ -1,8 +1,8 @@
 {
-	"$schema": "http://ironside-iglu.com.s3-website-us-east-1.amazonaws.com/schemas/com.ironside/WordPress/jsonschema/1-0-0#",
+	"$schema": "http://yourcompany-iglu.com/schemas/com.yourcompany/WordPress/jsonschema/1-0-0#",
 	"description": "Schema for Ironside Blog custom contexts",
 	"self": {
-		"vendor": "com.ironside",
+		"vendor": "com.yourcompany",
 		"name": "WordPress",
 		"format": "jsonschema",
 		"version": "1-0-0"
@@ -56,13 +56,13 @@
 			"type": "integer"
 		},
         "post_tags": {
-                "type": "string"
+            "type": ["string", "null"]
         },
         "post_categories": {
-                "type": "string"
+            "type": ["string", "null"]
         },
         "post_thumbnail": {
-                "type": "string"
+            "type": ["string", "null"]
         }
 	},
 	"additionalProperties": false
