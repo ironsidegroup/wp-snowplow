@@ -55,15 +55,15 @@
 		"comment_count": {
 			"type": "integer"
 		},
-        "post_tags": {
-            "type": ["string", "null"]
-        },
-        "post_categories": {
-            "type": ["string", "null"]
-        },
-        "post_thumbnail": {
-            "type": ["string", "null"]
-        }
+		"post_tags": {
+			"type": ["string", "null"]
+		},
+		"post_categories": {
+			"type": ["string", "null"]
+		},
+		"post_thumbnail": {
+			"type": ["string", "null"]
+		}
 	},
 	"additionalProperties": false
 }
