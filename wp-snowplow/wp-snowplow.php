@@ -143,6 +143,10 @@ function snowplow_track() {
 			//Extract post metadata
 			$this_post = get_queried_object();
 			
+			$cats = implode(",", wp_get_object_terms($this_post->ID, 'category', array('fields' => 'names')));
+			$tags = implode(",", wp_get_object_terms($this_post->ID, 'post_tag', array('fields' => 'names')));
+			$thumb = has_post_thumbnail($this_post->ID) ? wp_get_attachment_image_src(get_post_thumbnail_id($this_post->ID), 'full')[0] : NULL;
+			
 			//Nest arrays and type cast to overcome wp_localize_script issues
 			//https://wpbeaches.com/using-wp_localize_script-and-jquery-values-including-strings-booleans-and-integers/
 			$sp_post_meta = array (
@@ -161,9 +165,9 @@ function snowplow_track() {
 					'post_type' => $this_post->post_type,
 					'comment_status' => $this_post->comment_status,
 					'comment_count' => (int)$this_post->comment_count,
-					'post_tags' => wp_get_object_terms($this_post->ID, 'post_tag', array('fields' => 'names')),
-					'post_categories' => wp_get_object_terms($this_post->ID, 'category', array('fields' => 'names')),
-					'post_thumbnail' => has_post_thumbnail($this_post->ID) ? wp_get_attachment_image_src(get_post_thumbnail_id($this_post->ID), 'full')[0] : NULL
+					'post_tags' => $tags,
+					'post_categories' => $cats,
+					'post_thumbnail' => $thumb
 				)
 			);
 			
