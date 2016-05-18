@@ -6,7 +6,7 @@ Description: Adds a Snowplow tracking code with custom Wordpress context to your
 Version: 1.0
 Author: Greg Bonnette
 Author URI: http://gregbonnette.com
-License: Apache 2.0
+License: GPLv2
  */
  
 add_action( 'admin_menu', 'snowplow_add_admin_menu' );
