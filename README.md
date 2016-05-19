@@ -16,9 +16,9 @@ This Wordpress plugin and associated data schema for Snowplow Analytics can be u
 - **Post Name**
   - (String) The post's slug.
 - **Post Modified Date**
-  - (Timestamp)
+  - (Timestamp) The last modified date of the post.
 - **Post Modified Date (GMT)**
-  - (Timestamp)
+  - (Timestamp) The last mofified date of the post adjusted to GMT.
 - **GUID**
   - (String) A link to the post. This is not the permalink.
 - **Post Permalink**
