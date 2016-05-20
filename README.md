@@ -35,6 +35,20 @@ This Wordpress plugin and associated data schema for Snowplow Analytics can be u
   - (String) A comma seperated list of post categories.
 - **Post Thumbnail**
   - (String) If the post has a featured image, the URL of the full sized version of that image.
+- **Post Links**
+  - (Integer) The number of hyperlinks in the body of the post.
+- **Post Headings**
+  - (Integer) The number of heading tags in the body of the post.
+- **Post Paragraphs**
+  - (Integer) The number of paragraphs tags in the body of the post.
+- **Post Images**
+  - (Integer) The number of images in the post body, not including the featured or thumbnail image.
+- **Post Videos**
+  - (Integer) The number of videos in the post body. This assumes video embedding occurs with VIDEO, IFRAME or EMBED tags.
+- **Post Length**
+  - (Integer) The byte length of only the text of the post, not including any HTML markup.
+- **Post Words**
+  - (Integer) The number of words in only the text of the post, not including any HTML markup.
 
 For additional information on the above attributes, please refer to the [Wordpress Codex](https://codex.wordpress.org/Function_Reference/$post).
 
