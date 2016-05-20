@@ -1,6 +1,6 @@
 {
 	"$schema": "http://yourcompany-iglu.com/schemas/com.ironsidegroup/wordpress/jsonschema/1-0-0#",
-	"description": "Schema for a wordpress post custom context",
+	"description": "Schema for a Wordpress post custom context",
 	"self": {
 		"vendor": "com.ironsidegroup",
 		"name": "wordpress",
@@ -12,11 +12,20 @@
 		"id": {
 			"type": "integer"
 		},
-		"post_author": {
-			"type": "integer"
-		},
-		"post_author_name": {
+		"post_title": {
 			"type": ["string", "null"]
+		},
+		"post_name": {
+			"type": ["string", "null"]
+		},
+		"post_type": {
+			"type": "string"
+		},
+		"guid": {
+			"type": "string"
+		},
+		"post_permalink": {
+			"type": "string"
 		},
 		"post_date": {
 			"type": "string",
@@ -26,12 +35,6 @@
 			"type": "string",
 			"format": "date-time"
 		},
-		"post_title": {
-			"type": ["string", "null"]
-		},
-		"post_name": {
-			"type": ["string", "null"]
-		},
 		"post_modified": {
 			"type": "string",
 			"format": "date-time"
@@ -40,29 +43,47 @@
 			"type": "string",
 			"format": "date-time"
 		},
-		"guid": {
-			"type": "string"
+		"post_author": {
+			"type": "integer"
 		},
-		"post_permalink": {
-			"type": "string"
+		"post_author_name": {
+			"type": ["string", "null"]
 		},
-		"post_type": {
-			"type": "string"
+		"post_categories": {
+			"type": ["string", "null"]
+		},
+		"post_tags": {
+			"type": ["string", "null"]
+		},
+		"post_thumbnail": {
+			"type": ["string", "null"]
+		},
+		"post_links": {
+			"type": "integer"
+		},
+		"post_headings": {
+			"type": "integer"
+		},
+		"post_paragraphs": {
+			"type": "integer"
+		},
+		"post_images": {
+			"type": "integer"
+		},
+		"post_videos": {
+			"type": "integer"
+		},
+		"post_length": {
+			"type": "integer"
+		},
+		"post_words": {
+			"type": "integer"
 		},
 		"comment_status": {
 			"type": ["string", "null"]
 		},
 		"comment_count": {
 			"type": "integer"
-		},
-		"post_tags": {
-			"type": ["string", "null"]
-		},
-		"post_categories": {
-			"type": ["string", "null"]
-		},
-		"post_thumbnail": {
-			"type": ["string", "null"]
 		}
 	},
 	"additionalProperties": false
