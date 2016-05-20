@@ -17,6 +17,13 @@ window.snowplow('trackPageView', null, [{
 		comment_count: sp_post_meta.data.comment_count,
 		post_tags: sp_post_meta.data.post_tags,
 		post_categories: sp_post_meta.data.post_categories,
-		post_thumbnail: sp_post_meta.data.post_thumbnail
+		post_thumbnail: sp_post_meta.data.post_thumbnail,
+		post_links: sp_post_meta.data.post_links,
+		post_headings: sp_post_meta.data.post_headings,
+		post_paragraphs: sp_post_meta.data.post_paragraphs,
+		post_images: sp_post_meta.data.post_images,
+		post_videos: sp_post_meta.data.post_videos,
+		post_length: sp_post_meta.data.post_length,
+		post_words: sp_post_meta.data.post_words
 	}
 }]);

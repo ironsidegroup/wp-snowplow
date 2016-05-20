@@ -146,6 +146,15 @@ function snowplow_track() {
 			$cats = implode(",", wp_get_object_terms($this_post->ID, 'category', array('fields' => 'names')));
 			$tags = implode(",", wp_get_object_terms($this_post->ID, 'post_tag', array('fields' => 'names')));
 			$thumb = has_post_thumbnail($this_post->ID) ? wp_get_attachment_image_src(get_post_thumbnail_id($this_post->ID), 'full')[0] : NULL;
+			$content_filtered = apply_filters('the_content',$this_post->post_content);
+			$content_text = wp_strip_all_tags($this_post->post_content,true);
+			$post_links = preg_match_all('/<a\s[^>]*href=[^>]*>/siU', $content_filtered);
+			$post_headings = preg_match_all('/<h\d[^>]*\>/siU', $content_filtered);
+			$post_images = preg_match_all('/<img[^>]*\>/siU', $content_filtered);
+			$post_videos = preg_match_all('/<(video|embed|iframe)[^>]*\>/siU', $content_filtered);
+			$post_paragraphs = preg_match_all('/(<p>|<p\s[^>]*>)/siU', $content_filtered);
+			$post_length = strlen($content_text);
+			$post_words = str_word_count($content_text);
 			
 			//Nest arrays and type cast to overcome wp_localize_script issues
 			//https://wpbeaches.com/using-wp_localize_script-and-jquery-values-including-strings-booleans-and-integers/
@@ -167,7 +176,14 @@ function snowplow_track() {
 					'comment_count' => (int)$this_post->comment_count,
 					'post_tags' => $tags,
 					'post_categories' => $cats,
-					'post_thumbnail' => $thumb
+					'post_thumbnail' => $thumb,
+					'post_links' => (int)$post_links,
+					'post_headings' => (int)$post_headings,
+					'post_paragraphs' => (int)$post_paragraphs,
+					'post_images' => (int)$post_images,
+					'post_videos' => (int)$post_videos,
+					'post_length' => (int)$post_length,
+					'post_words' => (int)$post_words
 				)
 			);
 			
