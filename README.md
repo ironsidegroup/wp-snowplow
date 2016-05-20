@@ -44,7 +44,7 @@ This Wordpress plugin and associated data schema for Snowplow Analytics can be u
 - **Post Images**
   - (Integer) The number of images in the post body, not including the featured or thumbnail image.
 - **Post Videos**
-  - (Integer) The number of videos in the post body. This assumes video embedding occurs with VIDEO, IFRAME or EMBED tags.
+  - (Integer) The number of video, iframe or embed tags in the post body.
 - **Post Length**
   - (Integer) The byte length of only the text of the post, not including any HTML markup.
 - **Post Words**
